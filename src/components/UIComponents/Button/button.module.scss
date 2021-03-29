@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  min-width: 100px;
+  background-color: $button;
+  color: $white;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: bolder;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+    background-color: $button;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $button-hover;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $button;
+  }
+}
